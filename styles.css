@@ -1,6 +1,11 @@
-html, body {
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+html, body {
 	min-width: 1000px;
 	font-family: Arial;
 }
@@ -10,21 +15,29 @@ a {
 	color: black;
 }
 
-h2 {
-	font-size: 20px;
-	padding: 27px 0 27px 18px;
-	margin: 0 0 34px;
-	border-bottom: 1px solid #e5e5e5;
-}
-
-ul {
-	margin: 0;
-	padding: 0;
-}
-
 li {
 	list-style: none;
 }
+
+section {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.right-float {
+	float: right;
+}
+
+.left-float {
+	float: left;
+}
+
 
 
 #black-bar {
@@ -35,31 +48,21 @@ li {
 }
 
 	#black-bar a {
-		text-decoration: underline;
 		color: white;
 	}
 
-section {
-	width: 960px;
-	margin: 0 auto;
-	position: relative;
-}
 
-	#datetime {
-		float: right;
-	}
 
 header {
-	position: relative;
 	margin: 40px 0;
 }
 
 	.header-part {
 		display: inline-block;
+		vertical-align: middle;
 	}
 
-	#header-logo {
-		margin: 0;
+	#header-logo h1 {
 		font-size: 16px;
 		padding: 4px 0px 0px 50px;
 		background-image: url(img/internet.png);
@@ -67,24 +70,27 @@ header {
 		font-weight: bold;
 	}
 
-		#header-city div {
-			position: absolute;
-			top: 12px;
-			margin-left: 80px;
+	#header-city {
+		margin-left: 80px;
+	} 
+
+		#header-city span {
 			color: #448ccb;
 			border-bottom: 1px solid #448ccb;
-		} 
+		}
 
-		#header-city img {
-			position: absolute;
-			top: 20px;
-			margin-left: 148px;
+		#header-city a:after {
+			display: inline-block;
+			content: '';
+			background: url("img/down-arrow.png");
+			background-repeat: no-repeat;
+			height: 6px;
+			width: 10px;
+			margin-left: 8px;
 		}
 
 	#header-weather {
-		float: right;
-		height: 24px;
-		margin: 8px 60px 8px 0;
+		margin: 0 60px 0 0;
 		padding: 4px 0 0 36px;
 		background-image: url(img/weather.png);
 		background-repeat: no-repeat;
@@ -92,7 +98,7 @@ header {
 	}
 
 	#header-find {
-		float: right;
+		position: relative;
 	}
 
 		#header-find input {
@@ -105,27 +111,27 @@ header {
 
 		}
 
-		#header-find::after{
+		#header-find button {
 			position: absolute;
 			top: 12px;
 			right: 20px;
-			display: block;
 			content: '';
-			height: 20px;
-			width: 20px;
+			height: 16px;
+			width: 16px;
 			background-image: url(img/search.png);
 			background-repeat: no-repeat;
+			border: none;
 		}
+
 
 
 nav {
 	margin: 30px 0;
 }
 
-nav li {
-	color: black;
-	display: inline-block;
-}
+	nav li {
+		display: inline-block;
+	}
 
 	nav li::after {
 		content: '/';
@@ -137,6 +143,9 @@ nav li {
 		content: none;
 	}
 
+
+
+
 main {
 	padding-top: 20px;
 	background-color: #f9f9f9;
@@ -144,60 +153,32 @@ main {
 	background-repeat: repeat-x;
 }
 
-	main section {
-		overflow-y: hidden;
-	}
+
 
 
 #column-left {
 	background-color: #FFFFFF;
-	width: 250px;
-	float: left;
+	width: 25%;
 }
 
-	.news-item {
+	#day-news-title {
+		font-size: 20px;
+		padding: 28px 18px;
+		margin-bottom: 30px;
+		border-bottom: 1px solid #e5e5e5;
+	}
+
+	.day-news-item {
 		padding-left: 18px;
-		margin-bottom: 27px;
+		margin-bottom: 24px;
 		font-size: 14px;
 	}
 
-	.news-item-text {
-		margin-bottom: 20px;
-	}
-
-	.news-item-props {
-		font-size: 12px;
-		position: relative;
-	}
-
-		.news-tag {
-			color: #91919f;
+		.day-news-item-text {
+			margin-bottom: 20px;
 		}
 
-		.news-tag::before {
-			content: '/';
-			margin-right: 4px;
-		}
-
-		.news-time {
-			position: absolute;
-			top: 0;
-			left: 120px;
-			padding-left: 15px;
-			background-image: url('img/icon-time.png');
-			background-repeat: no-repeat;
-		}
-
-		.news-comments-count {
-			position: absolute;
-			top: 0;
-			left: 180px;
-			padding-left: 15px;
-			background-image: url('img/icon-comments.png');
-			background-repeat: no-repeat;
-		}
-
-	#button {
+	#column-left button {
 		display: block;
 		width: 80%;
 		text-align: center;
@@ -206,13 +187,15 @@ main {
 		margin: 40px auto;
 		padding: 12px 0;
 		color: #4f9ed1;
+		background-color: #ffffff;
 	}
 
 
+
+
 #column-center {
-	width: 420px;
-	margin-left: 20px;
-	float: left;
+	width: 50%;
+	padding: 0 20px;
 }
 
 	.main-post {
@@ -228,7 +211,7 @@ main {
 			display: block;
 			font-size: 12px;
 			color: white;
-			margin-top: 100px;
+			margin-top: 80px;
 		}
 
 		.main-post-tag::before {
@@ -273,16 +256,20 @@ main {
 			color: white;
 		}
 
+
+
 	.right-general-posts, .left-general-posts {
-		width: 200px;
+		width: 50%;
 	}
 
 	.left-general-posts {
 		float: left;
+		padding-right: 2%;
 	}
 
 	.right-general-posts {
 		float: right;
+		padding-left: 2%;
 	}
 
 		.general-post {
@@ -290,8 +277,8 @@ main {
 		}
 
 			.general-post-image{
-				width: 200px;
-				height: 140px;
+				width: 100%;
+				height: 160px;
 			}
 
 			.general-post-text {
@@ -302,108 +289,58 @@ main {
 			}
 
 
-			.general-post-props {
-				display: block;
-				height: 30px;
-				font-size: 12px;
-				position: relative;
-			}
-
-				.general-post-tag {
-					position: absolute;
-					left: 0px;
-					display: block;
-					font-size: 12px;
-					color: grey;
-				}
-
-				.general-post-tag::before {
-					content: '/';
-					margin-right: 2px;
-				}
-
-				.general-post-time {
-					position: absolute;
-					top: 0;
-					left: 100px;
-					padding-left: 15px;
-					background-image: url('img/icon-time.png');
-					background-repeat: no-repeat;
-					background-position: 0% 40%;
-				}
-
-				.general-post-comments-count {
-					position: absolute;
-					top: 0;
-					left: 160px;
-					padding-left: 15px;
-					background-image: url('img/icon-comments.png');
-					background-repeat: no-repeat;
-				}
-
 
 #column-right {
-	width: 250px;
+	width: 25%;
 	float: right;
 }
 
 	#column-right img {
+		width: 100%;
 		margin-bottom: 20px;
 	}
 
 
+
+
 #special-news {
 	height: 400px;
-	margin: 0px 0px 30px;
+	margin-bottom: 30px;
 	background-color: white;
 }
 
-	.special-news-item, .special-news-post{
-		display: inline-block;
-	}
-
-	.special-news-title {
-		padding: 0;
-		font-weight: bold;
-		font-size: 20px;
-		border-bottom: 1px solid #ebebeb;
-	}
-
-	.special-news-post {
-		height: 400px;
+	#most-popular-article {
 		width: 60%;
-		float: left;
-		padding: 0;
+		height: 400px;
+		padding: 20px;
 		background-image: url("img/news-6.png");
-		background-position: bottom;
+		background-position: center;
+		background-size: cover;
 	}
 
-		.special-news-post div, .special-news-post a {
-			padding-left: 18px;
-		}
 
-
-	.special-news-item {
-		margin: 16px 0;
-		float: right;
-		padding: 0;
+	#popular-news {
 		width: 40%;
 	}
 
-		.special-news-item div, .special-news-item p{
-			padding: 0px 18px;
-		}
-
-		.special-news-item-text {
+		.popular-news-title {
+			padding: 24px 18px;
 			font-weight: bold;
-			font-size: 16px;
-			margin-bottom: 10px;
+			font-size: 20px;
+			border-bottom: 1px solid #ebebeb;
 		}
 
-		#special-news-time {
-			margin-left: 12px;
-			padding-left: 12px;
+		.popular-news-article {
+			margin: 24px 18px;
 		}
+
+			.popular-news-article-text {
+				font-weight: bold;
+				font-size: 16px;
+				margin-bottom: 10px;
+			}
+
+
 
 
 footer {
@@ -412,31 +349,32 @@ footer {
 	padding-top: 40px;
 	font-size: 16px;
 }
+
+	footer a {
+		color: white;
+	}
 	
 	#footer-menu, #footer-info, #footer-contacts {
 		display: inline-block;
 	}
 
-		footer a {
-			margin: 8px 0;
-			color: white;
-		}
 
 	#footer-menu {
-		width: 280px;
+		width: 30%;
 	}
 
-		#footer-menu a {
+		#footer-menu li {
 			width: 135px;
 			display: inline-block;
+			margin: 8px 0;
 		}
 
 
 	#footer-info {
-		margin-left: 160px;
+		margin-left: 15%;
 	}
 
-		#footer-info a {
+		#footer-info li {
 			margin: 16px 0px;
 			display: block;
 			width: 170px;
@@ -459,7 +397,7 @@ footer {
 			margin-bottom: 50px;
 		}
 
-			#social-networks a{
+			#social-networks li {
 				display: inline-block;
 				border-radius: 100%;
 				margin: 0px 10px 0px 0px;
@@ -492,4 +430,39 @@ footer {
 		color: #666;
 		font-size: 14px;
 		margin-top: 40px;
+	}
+
+
+
+
+.news-item-props {
+	font-size: 12px;
+	position: relative;
+}
+
+	.news-tag {
+		color: #91919f;
+	}
+
+	.news-tag::before {
+		content: '/';
+		margin-right: 4px;
+	}
+
+	.news-time {
+		position: absolute;
+		top: 0;
+		left: 120px;
+		padding-left: 15px;
+		background-image: url('img/icon-time.png');
+		background-repeat: no-repeat;
+	}
+
+	.news-comments-count {
+		position: absolute;
+		top: 0;
+		left: 180px;
+		padding-left: 15px;
+		background-image: url('img/icon-comments.png');
+		background-repeat: no-repeat;
 	}
