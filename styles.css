@@ -382,10 +382,14 @@ footer {
 		}
 
 			#social-networks li {
-				width: 40px;
-				height: 40px;
 				display: inline-block;
 				vertical-align: middle;
+			}
+
+			#social-networks a {
+				display: block;
+				width: 40px;
+				height: 40px;
 				border: 1px solid white;
 				border-radius: 100%;
 				margin: 0px 10px 0px 0px;
