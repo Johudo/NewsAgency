@@ -1,0 +1,140 @@
+/*----- Footer -----*/
+
+.footer-block {
+	background-color: #00122f;
+
+	padding-top: 50px;
+
+	font-size: 16px;
+	color: white;
+}
+
+
+.footer-link {
+	color: inherit;
+}
+
+
+.footer-menu, .footer-info, .footer-contacts {
+	display: inline-block;
+}
+
+
+
+/*----- Footer Menu -----*/
+
+.footer-menu {
+	column-count: 2;
+	column-gap: 32px;
+
+	line-height: 32px;
+}
+
+
+
+/*----- Footer Company Info -----*/
+
+.footer-info {
+	margin-left: 192px;
+	padding-top: 12px;
+}
+
+
+.footer-info__block {
+	width: 170px;
+
+	display: block;
+
+	margin: 12px 0px;
+	padding-left: 4px;
+}
+
+
+
+/*----- Footer Contacts -----*/
+
+.social-net {
+	margin: 8px 0 42px;
+}
+
+
+.social-net__block {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+.social-net__link {
+	display: block;
+
+	width: 40px;
+	height: 40px;
+
+	margin-left: 16px;
+
+	border: 1px solid white;
+	border-radius: 100%;
+}
+
+
+.vk {
+	background: url("../img/vk.png") no-repeat center;
+}
+
+
+.facebook {
+	background: url("../img/facebook.png") no-repeat center;
+}
+
+
+.twitter {
+	background: url("../img/twitter.png") no-repeat center;
+}
+
+
+.instagram {
+	background: url("../img/instagram.png") no-repeat center;
+}
+
+
+.contacts-info-block {
+	display: block;
+
+	margin: 24px 0px 0px 16px;
+	padding-left: 33px;
+
+	color: inherit;
+	letter-spacing: 0.5px;
+}
+
+
+.footer__telephone {
+	background-image: url("../img/telephone.png");
+	background-repeat: no-repeat;
+	background-position: 0% 50%;
+}
+
+
+.footer__email {
+	background-image: url("../img/email.png");
+	background-repeat: no-repeat;
+	background-position: 0% 45%;
+}
+
+
+
+
+/*----- Copyrights -----*/
+.copyrights {
+	margin-top: 46px;
+	padding: 16px 0;
+
+	border-top: 1px solid #666;
+
+	text-align: center;
+	font-size: 14px;
+	color: #666;
+
+	background-color: #00122f;
+}
+

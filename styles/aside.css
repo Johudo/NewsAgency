@@ -1,0 +1,84 @@
+/*----- Left Aside -----*/
+
+.column-left {
+	background-color: white;
+	width: 25%;
+}
+
+
+.day-news__title {
+	padding: 25px 18px;
+	margin-bottom: 28px;
+
+	border-bottom: 1px solid #e5e5e5;
+
+	font-size: 20px;
+}
+
+
+.day-news__item {
+	padding: 0 18px;
+	margin-bottom: 18px;
+}
+
+
+.day-news__text {
+	margin-bottom: 12px;
+
+	font-weight: normal;
+	font-size: 14px;
+	letter-spacing: 0.4px;
+	line-height: 20px;
+	overflow-wrap: break-word;
+}
+
+
+.day-news__comments {
+	margin-right: 20px;
+}
+
+
+.column-left__button {
+	display: block;
+
+	width: 175px;
+
+	border: 1px solid #4f9ed1;
+	border-radius: 30px;
+
+	margin: 34px auto 25px;
+	padding: 14px 0;
+
+	background-color: inherit;
+
+	text-align: center;
+	color: #4f9ed1;
+}
+
+
+
+
+/*----- Right Aside -----*/
+
+.column-right {
+	width: 25%;
+}
+
+
+.column-right__banner {
+	display: block;
+
+	width: 100%;
+
+	margin-bottom: 16px;
+}
+
+
+.column-right__banner:last-child {
+	margin-bottom: 0;
+}
+
+
+.column-right__banner-img {
+	width: 100%;
+}
