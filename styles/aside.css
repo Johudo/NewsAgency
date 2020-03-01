@@ -1,21 +1,22 @@
+
 /*----- Left Aside -----*/
 
 .column-left {
-	width: 25%;
+	width: 100%;
+	margin-top: 30px;
 }
 
 .left-aside-part {
 	width: 100%;
-	background-color: white;
 	margin-bottom: 20px;
 	padding-bottom: 1px;
 }
 
 
 /*----- Left Aside News -----*/
-
 .day-news__title {
-	padding: 25px 18px;
+	padding: 25px 0;
+	margin: 0 25px 28px;
 	margin-bottom: 28px;
 
 	border-bottom: 1px solid #e5e5e5;
@@ -25,8 +26,8 @@
 
 
 .day-news__item {
-	padding: 0 18px;
-	margin-bottom: 18px;
+	padding: 0 25px;
+	margin-bottom: 28px;
 }
 
 
@@ -42,14 +43,14 @@
 
 
 .day-news__comments {
-	margin-right: 20px;
+	margin-right: 72px;
 }
 
 
 .column-left__button {
 	display: block;
 
-	width: 175px;
+	width: calc(100% - 50px);
 
 	border: 1px solid #4f9ed1;
 	border-radius: 30px;
@@ -67,7 +68,7 @@
 /*----- Left Aside Exchange Rate -----*/
 
 .exchange-rate{
-	padding: 0 18px;
+	padding: 0 25px;
 	margin-bottom: 24px;
 
 }
@@ -101,17 +102,13 @@
 /*----- Right Aside -----*/
 
 .column-right {
-	width: 25%;
+	display: flex;
+	flex-wrap: wrap;
+	line-height: 0;
 }
 
 
-.column-right__banner {
-	display: block;
 
-	width: 100%;
-
-	margin-bottom: 16px;
-}
 
 
 .column-right__banner:last-child {
@@ -120,5 +117,110 @@
 
 
 .column-right__banner-img {
-	width: 100%;
+	height: 400px;
 }
+
+
+/* Малые девайсы («ландшафтные телефоны», >= 576px) */
+@media screen and (min-width: 576px) { 
+
+	.column-left {
+		width: calc(50% - 10px);
+
+		margin-right: 20px;
+		margin-top: 0;
+	}
+
+
+	.left-aside-part {
+		background-color: white;
+	}
+
+
+	.day-news__item {
+		margin-bottom: 18px;
+	}
+
+
+	.day-news__title {
+		padding: 25px 18px;
+		margin: 0 0 28px;
+	}
+
+
+	.day-news__item {
+		padding: 0 18px;
+	}
+
+
+	.day-news__comments {
+		margin-right: 20px;
+	}
+
+
+	.column-left__button {
+		width: 175px;
+	}
+
+
+	.exchange-rate{
+		padding: 0 18px;
+	}
+
+
+	.column-right {
+		width: calc(50% - 10px);
+
+		display: block;
+
+	}
+
+
+	.column-right__banner {
+		width: 100%;
+
+		display: block;
+
+		margin-bottom: 16px;
+
+	}
+
+
+	.column-right__banner-img {
+		width: 100%;
+		height: auto;
+	}
+
+
+}
+
+
+
+/* Средние девайсы («таблетки», >= 768px) */
+@media screen and (min-width: 768px) { 
+
+}
+
+
+
+
+/* Большие девайсы (десктопы, >= 992px) */
+@media screen and (min-width: 992px) { 
+
+
+	.column-left {
+		width: 25%;
+		margin-right: 0;
+	}
+
+	.column-right {
+		width: 25%;
+	}
+
+
+	.day-news__comments {
+		margin-right: 8px;
+	}
+
+}
+

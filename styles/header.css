@@ -4,9 +4,15 @@
 	padding: 22px 0 18px;
 
 	color: white;
-	font-size: 16px;
+	font-size: 13px;
 
 	background-color: #00122f;
+}
+
+
+.black-bar__container {
+	display: flex;
+	justify-content: space-between;
 }
 
 
@@ -19,31 +25,110 @@
 }
 
 
+.black-bar__time {
+	display: none;
+}
+
+
+.black-bar__text {
+	margin: 0 auto;
+}
+
+
+
 
 
 /*----- Header -----*/
 
 .header-block {
-	margin: 40px 0 32px;
-
 	font-size: 16px;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;	
+	justify-content: space-between;
 }
 
 
-.header-part {
-	display: inline-block;
-	vertical-align: middle;
+.header__mobile-upper {
+	width: 100%;
+
+	margin: 0 auto;
+	padding: 16px 25px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 
+.header__all-device {
+	position: relative;
+
+	width: 100%;
+
+	padding: 32px 25px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	background: linear-gradient(rgba(0,0,0,0.05) 0%, #f9f9f9 50%, rgba(249,249,249,1) 98%);
+}
+
+
+
+.header__search-mobile {
+	content: '';
+
+	height: 16px;
+	width: 16px;
+
+	background-image: url(../img/search.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+
+	border: none;
+}
+
+
+.header__burger {
+	content: '';
+
+	height: 20px;
+	width: 20px;
+
+	background-image: url(../img/burger.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: 50% 50%;
+
+	border: none;
+}
 
 .header__logo {
-	width: 120px;
+	display: flex;
+	align-items: center;
+}
+
+
+.header__logo__title {
+	margin-left: 8px;
+
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+.header__logo__img {
+	width: 28px;
+	height: 28px;
 }
 
 
 .header__city {
-	margin-left: 58px;
+	display: none;
 }
 
 
@@ -60,30 +145,48 @@
 	display: inline-block;
 	content: '';
 
-	margin-left: 5px;
+	margin-left: 6px;
 
 	background: url("../img/down-arrow.png");
 	background-repeat: no-repeat;
 }
 
 
-.header__weather {
-	margin: 0 38px 0 0;
-	padding: 2px 0 6px 38px;
+.header__date {
+	color: grey;
+}
 
-	background-image: url(../img/weather.png);
+
+.header__time {
+	padding: 8px 0 8px 20px;
+
+	background-image: url('../img/time.png');
 	background-repeat: no-repeat;
+	background-position: 0 45%;
+
+	color: grey;
+}
+
+
+.header__weather {
+	padding: 8px 0 8px 32px;
+
+	background-image: url('../img/weather.png');
+	background-repeat: no-repeat;
+	background-position: 0 30%;
 
 	color: grey;
 }
 
 
 .header__search {
+	display: none;
 	position: relative;
 }
 
 
 .header__search-input {
+
 	height: 45px;
 	width: 320px;
 
@@ -100,6 +203,7 @@
 
 
 .header__search-button {
+
 	position: absolute;
 	top: 14px;
 	right: 20px;
@@ -111,6 +215,7 @@
 
 	background-image: url(../img/search.png);
 	background-repeat: no-repeat;
+	background-color: transparent;
 	border: none;
 }
 
@@ -120,6 +225,7 @@
 /*----- Navigation Block -----*/
 
 .nav-block {
+	display: none;
 	margin: 30px 0 32px;
 }
 
@@ -127,6 +233,8 @@
 .nav-element {
 	display: inline-block;
 	vertical-align: middle;
+
+	margin-bottom: 4px;
 }
 
 
@@ -145,3 +253,194 @@
 }
 
 
+
+
+.header__burger__actived {
+	background-image: url(../img/close.png);
+	background-size: cover;
+}
+
+
+.nav__actived {
+	position: absolute;
+	display: block;
+
+	z-index: 10;
+	background: linear-gradient(rgba(0,0,0,0.05) 0%, #f9f9f9 50%, rgba(249,249,249,1) 98%);
+	background-color: white;
+	
+	margin: 0;
+	padding-top: 20px;
+
+	height: 2000%;
+	width: 100%;
+	top: 136px;
+}
+
+
+.nav-element__actived {
+	display: block;
+
+	margin: 0 25px;
+	padding: 8px 0;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.nav-element__actived::after {
+	display: none;
+}
+
+.nav-element:last-child {
+	border: none;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 425px) {
+
+	.header-block {
+		margin: 0 auto;
+
+	}
+
+	.header__all-device {
+		padding: 0px 25px 30px;
+	}
+
+
+	.header__mobile-upper {
+		padding: 30px 25px 30px;
+	}
+
+
+	.header__logo__img {
+		width: 40px;
+		height: 40px;
+	}
+
+
+	.header__logo__title {
+		width: 85px;
+		font-size: 16px;
+	}
+
+
+	.header__all-device {
+		background: transparent;
+	}
+
+
+	.header__city {
+		display: block;
+	}
+
+
+
+}
+
+
+
+
+/* Малые девайсы («ландшафтные телефоны», >= 576px) */
+@media screen and (min-width: 576px) { 
+
+	.black-bar {
+		font-size: 16px;
+	}
+
+
+	.header__mobile-upper {
+		padding: 30px 0;
+	}
+
+
+	.header__all-device {
+		padding: 0 0 30px;
+	}
+
+
+	.header__time {
+		padding: 8px 0 8px 28px;
+	}
+
+
+	.header__weather {
+		padding: 8px 0 8px 38px;
+	}
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+	.header-block {
+		margin: 24px auto;
+	}
+
+
+	.black-bar__time {
+		display: block;
+	}
+
+
+	.black-bar__text {
+		margin: 0;
+	}
+
+
+	.header__mobile-upper {
+		justify-content: normal;
+		width: 25%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.header__all-device {
+		width: 75%;
+	}
+
+
+	.header__burger {
+		display: none;
+	}
+
+
+	.header__search-mobile {
+		display: none;
+	}
+
+
+	.header__date {
+		display: none;
+	}
+
+
+	.header__time {
+		display: none;
+	}
+
+
+	.header__search {
+		display: block;
+	}
+
+
+	.nav-block {
+		display: block;
+		margin: 30px 0 32px;
+	}
+
+}
+
+
+
+@media screen and (min-width: 1200px) {
+
+	
+}

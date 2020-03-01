@@ -3,6 +3,8 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Новостное агентство</title>
 
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
@@ -10,21 +12,17 @@
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="stylesheet" type="text/css" href="styles/aside.css">
 	<link rel="stylesheet" type="text/css" href="styles/footer.css">
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="scripts/main.js"></script>
 </head>
 
-<body>
+<body id="news-agency">
 
 
 	<!------------ Top Black Block ------------>
 
 	<div class="black-bar">
-		<div class="clearfix fixed-container">
-			<div class="float-left">Самые <a href="#" class="black-bar__link">свежие новости</a> в реальном времени</div>
-			<time class="float-right">12:30 19.06.2019</time>
+		<div class="container black-bar__container">
+			<div class="black-bar__text">Самые <a href="#" class="black-bar__link">свежие новости</a> в реальном времени</div>
+			<time class="black-bar__time">12:30 19.06.2019</time>
 		</div>
 	</div>
 
@@ -32,30 +30,36 @@
 
 	<!------------ Header ------------>
 
-	<header class="header-block">
-		<div class="clearfix fixed-container">
+	<header class="header-block container">
 
-			<div class="float-left">
-				<a href="#" class="header-part">
-					<img src="img/logo.png" class="header__logo" alt="На главную страницу">
-				</a>
+				<div class="header__mobile-upper">
+					<button class="header__burger"></button>
 
-				<a href="#" class="header__city header-part">
-					<span class="header__city__text">Москва</span>
-				</a>
-			</div>
+					<a href="#" class="header__logo">
+						<img src="./img/internet.png" class="header__logo__img">
+						<h1 class="header__logo__title">Новостное агенство</h1>
+					</a>
 
+					<button class="header__search-mobile" aria-label="Искать на сайте"></button>
+				</div>
 
-			<div class="float-right">
-				<span class="header__weather header-part">+22 °C</span>
+				<div class="header__all-device">			
+					<a href="#" class="header__city">
+						<span class="header__city__text">Москва</span>
+					</a>
 
-				<form class="header__search header-part" action="#">
-					<input type="text" name="search-field" placeholder="Поиск по сайту" class="header__search-input">
-					<button class="header__search-button" aria-label="Искать на сайте"></button>
-				</form>
-			</div>
+					<time class="header__date">19 июня, Вт</time>
 
-		</div>
+					<time class="header__time">10:48</time>
+
+					<span class="header__weather">+22 °C</span>
+
+					<form class="header__search" action="#">
+						<input type="text" name="search-field" placeholder="Поиск по сайту" class="header__search-input">
+						<button class="header__search-button" aria-label="Искать на сайте"></button>
+					</form>
+				</div>
+
 	</header>
 
 
@@ -63,7 +67,7 @@
 	<!------------ Navigation Block ------------>
 
 	<nav class="nav-block">
-		<div class="fixed-container">
+		<div class="container">
 			<ul>
 				<li class="nav-element"><a href="#">Главная</a></li>
 				<li class="nav-element"><a href="#">Политика</a></li>
@@ -82,16 +86,14 @@
 
 	<!------------ Main Content ------------>
 
-	<main class="main-content clearfix">
-		<div class="fixed-container">
+	<main class="main-content ">
 
 
-			<div class="clearfix">
-
+		<div class="container main-content-part">
 
 				<!------------ Left Aside ------------>
 
-				<div class="column-left float-left">
+				<aside class="column-left ">
 
 					<section class="left-aside-part">
 
@@ -106,7 +108,7 @@
 							<div class="news__props">
 								<a href="#" class="news__tag">ЧМ по футболу</a>
 
-								<div class="float-right">
+								<div>
 									<time class="news__time">10:45</time>
 									<span class="news__comments day-news__comments">15</span>
 								</div>
@@ -122,7 +124,7 @@
 							<div class="news__props">
 								<a href="#" class="news__tag">Политика</a>
 
-								<div class="float-right">
+								<div>
 									<time class="news__time">10:45</time>
 									<span class="news__comments day-news__comments">17</span>
 								</div>
@@ -138,7 +140,7 @@
 							<div class="news__props">
 								<a href="#" class="news__tag">Транспорт</a>
 
-								<div class="float-right">
+								<div>
 									<time class="news__time">10:45</time>
 									<span class="news__comments day-news__comments">17</span>
 								</div>
@@ -154,7 +156,7 @@
 							<div class="news__props">
 								<a href="#" class="news__tag">Погода</a>
 
-								<div class="float-right">
+								<div>
 									<time class="news__time">10:45</time>
 									<span class="news__comments day-news__comments">17</span>
 								</div>
@@ -170,7 +172,7 @@
 							<div class="news__props">
 								<a href="#" class="news__tag">Транспорт</a>
 
-								<div class="float-right">
+								<div>
 									<time class="news__time">10:45</time>
 									<span class="news__comments day-news__comments">17</span>
 								</div>
@@ -186,7 +188,7 @@
 							<div class="news__props">
 								<a href="#" class="news__tag">ЧМ по футболу</a>
 
-								<div class="float-right">
+								<div>
 									<time class="news__time">10:45</time>
 									<span class="news__comments day-news__comments">17</span>
 								</div>
@@ -217,19 +219,20 @@
 
 					</section>
 
-				</div>
+				</aside>
 
 
 
 				<!------------ Central Block ------------>
 
-				<section class="column-center float-left">
+				<section class="column-center ">
 
 					<h2 class="visually-hidden">Рекомендуемые новости</h2>
 
 
 					<!------------ Main Post ------------>
 
+				
 					<article class="main-post">
 						<img src="img/news-1.png" class="main-post__img" alt="В Крыму отреагировали...">
 
@@ -240,127 +243,139 @@
 								<a href="#" class="main-post__title-link">В Крыму отреагировали на&nbsp;слова Кравчука о&nbsp;возврате полуострова</a>
 							</h3>
 
-							<time>
-								<div class="main-post__date main-post__props">19 Июня 2018</div>
-								<div class="main-post__time main-post__props">10:45</div>
-							</time>
+							<div>
+								<time class="main-post__date main-post__props">19 Июня 2018</time>
+								<time class="main-post__time main-post__props">10:45</time>
+							</div>
 						</div>
 					</article>
 
-
+					
 
 					<!------------ General Posts ------------>
 
-					<div class="clearfix">
+					<div class="general-posts-block">
 
-						<article class="general-post float-left">
+						<article class="general-post">
 							<img src="img/news-2.png" alt="Алексей Навальный..." class="general-post__image"/>
 
-							<h3 class="general-post__text">
-								<a href="#">Алексей Навальный объявил акцию против пенсионной реформы 1 июля</a>
-							</h3>
+							<div class="general-post__content">
+								<h3 class="general-post__text">
+									<a href="#">Алексей Навальный объявил акцию против пенсионной реформы 1 июля</a>
+								</h3>
 
-							<div class="news__props">
-								<a href="#" class="news__tag">Политика</a>
+								<div class="news__props">
+									<a href="#" class="news__tag">Политика</a>
 
-								<div class="float-right">
-									<time class="news__time">10:45</time>
-									<span class="news__comments general-post__comments">17</span>
+									<div>
+										<time class="news__time">10:45</time>
+										<span class="news__comments general-post__comments">17</span>
+									</div>
 								</div>
 							</div>
 						</article>
 
 
 
-						<article class="general-post float-left">
+						<article class="general-post">
 							<img src="img/news-3.png" alt="Дума увеличила..." class="general-post__image" />
 
-							<h3 class="general-post__text">
-								<a href="#">Дума увеличила пошлины за&nbsp;выдачу загранпаспортов и водительских прав</a>
-							</h3>
+							<div class="general-post__content">
+								<h3 class="general-post__text">
+									<a href="#">Дума увеличила пошлины за&nbsp;выдачу загранпаспортов и водительских прав</a>
+								</h3>
 
-							<div class="news__props">
-								<a href="#" class="news__tag">Общество</a>
+								<div class="news__props">
+									<a href="#" class="news__tag">Общество</a>
 
-								<div class="float-right">
-									<time class="news__time">10:45</time>
-									<span class="news__comments general-post__comments">17</span>
+									<div>
+										<time class="news__time">10:45</time>
+										<span class="news__comments general-post__comments">17</span>
+									</div>
 								</div>
 							</div>
 						</article>
 
 
 
-						<article class="general-post float-left">
+						<article class="general-post">
 							<img src="img/news-4.png" alt="В России заработал..." class="general-post__image" />
 
-							<h3 class="general-post__text">
-								<a href="#">В России заработал стриминговый сервис YouTube</a>
-							</h3>
+							<div class="general-post__content">
+								<h3 class="general-post__text">
+									<a href="#">В России заработал стриминговый сервис YouTube</a>
+								</h3>
 
-							<div class="news__props">
-								<a href="#" class="news__tag">Интернет</a>
+								<div class="news__props">
+									<a href="#" class="news__tag">Интернет</a>
 
-								<div class="float-right">
-									<time class="news__time">10:45</time>
-									<span class="news__comments general-post__comments">17</span>
+									<div>
+										<time class="news__time">10:45</time>
+										<span class="news__comments general-post__comments">17</span>
+									</div>
 								</div>
 							</div>
 						</article>
 
 
 
-						<article class="general-post float-left">
+						<article class="general-post">
 							<img src="img/news-5.png" alt="Кейн признан лучшим..." class="general-post__image" />
 
-							<h3 class="general-post__text">
-								<a href="#">Кейн признан лучшим игроком матча ЧМ-2018 Тунис&nbsp;—&nbsp;Англия</a>
-							</h3>
+							<div class="general-post__content">
+								<h3 class="general-post__text">
+									<a href="#">Кейн признан лучшим игроком матча ЧМ-2018 Тунис&nbsp;—&nbsp;Англия</a>
+								</h3>
 
-							<div class="news__props">
-								<a href="#" class="news__tag">Политика</a>
+								<div class="news__props">
+									<a href="#" class="news__tag">Политика</a>
 
-								<div class="float-right">
-									<time class="news__time">10:45</time>
-									<span class="news__comments general-post__comments">17</span>
+									<div>
+										<time class="news__time">10:45</time>
+										<span class="news__comments general-post__comments">17</span>
+									</div>
 								</div>
 							</div>
 						</article>	
 
 
 
-						<article class="general-post float-left">
+						<article class="general-post">
 							<img src="img/news-6.png" alt="Кейн признан лучшим..." class="general-post__image" />
 
-							<h3 class="general-post__text">
-								<a href="#">Пассажиры рассказали о жесткой посадке самолета в Коми</a>
-							</h3>
+							<div class="general-post__content">
+								<h3 class="general-post__text">
+									<a href="#">Пассажиры рассказали о жесткой посадке самолета в Коми</a>
+								</h3>
 
-							<div class="news__props">
-								<a href="#" class="news__tag">Политика</a>
+								<div class="news__props">
+									<a href="#" class="news__tag">Политика</a>
 
-								<div class="float-right">
-									<time class="news__time">10:45</time>
-									<span class="news__comments general-post__comments">17</span>
+									<div>
+										<time class="news__time">10:45</time>
+										<span class="news__comments general-post__comments">17</span>
+									</div>
 								</div>
 							</div>
 						</article>	
 
 
 
-						<article class="general-post float-left">
+						<article class="general-post">
 							<img src="img/news-7.png" alt="Кейн признан лучшим..." class="general-post__image" />
 
-							<h3 class="general-post__text">
-								<a href="#">Москва впервые принимает участие в Х Всемирном форуме городов</a>
-							</h3>
+							<div class="general-post__content">
+								<h3 class="general-post__text">
+									<a href="#">Москва впервые принимает участие в Х Всемирном форуме городов</a>
+								</h3>
 
-							<div class="news__props">
-								<a href="#" class="news__tag">Политика</a>
+								<div class="news__props">
+									<a href="#" class="news__tag">Политика</a>
 
-								<div class="float-right">
-									<time class="news__time">10:45</time>
-									<span class="news__comments general-post__comments">17</span>
+									<div>
+										<time class="news__time">10:45</time>
+										<span class="news__comments general-post__comments">17</span>
+									</div>
 								</div>
 							</div>
 						</article>
@@ -373,7 +388,7 @@
 
 				<!------------ Right Aside ------------>
 
-				<aside class="column-right float-right">
+				<aside class="column-right ">
 
 					<a href="#" class="column-right__banner" >
 						<img src="img/banner-1.png" alt="Lexus NS SALE" class="column-right__banner-img">
@@ -391,14 +406,13 @@
 
 			<!------------ Most Readable Posts ------------>
 
-			<section class="special-news clearfix">
-
-				<h2 class="day-news__title popular-news float-right">Cамые читаемые новости</h2>
+			<section class="special-news container">
 
 
 				<!------------ Most Popular Post ------------>
 
-				<article class="most-popular-post float-left">
+				
+				<article class="most-popular-post">
 					<img src="img/news-8.png" class="most-popular-post__img" alt="Пекин обвинил...">
 
 					<div class="most-popular-post__content">
@@ -419,11 +433,13 @@
 					</div>
 				
 				</article>
-
+			
 
 				<!------------ Other Popular Posts ------------>
 
-				<div class="popular-news float-right">
+				<div class="popular-news">
+
+					<h2 class="day-news__title">Cамые читаемые новости</h2>
 
 					<article class="day-news__item popular-news__item">
 						<h3 class="popular-news__text">
@@ -433,7 +449,7 @@
 						<div class="news__props">
 							<a href="#" class="news__tag">Политика</a>
 
-							<div class="float-right popular-news__props">
+							<div class="popular-news__props">
 								<time class="news__time">10:45</time>
 								<span class="news__comments">17</span>
 							</div>
@@ -450,7 +466,7 @@
 						<div class="news__props">
 							<a href="#" class="news__tag">Политика</a>
 
-							<div class="float-right popular-news__props">
+							<div class="popular-news__props">
 								<time class="news__time">10:45</time>
 								<span class="news__comments">17</span>
 							</div>
@@ -467,7 +483,7 @@
 						<div class="news__props">
 							<a href="#" class="news__tag">Политика</a>
 
-							<div class="float-right popular-news__props">
+							<div class="popular-news__props">
 								<time class="news__time">10:45</time>
 								<span class="news__comments">17</span>
 							</div>
@@ -478,7 +494,6 @@
 
 			</section>
 
-		</div>
 	</main>
 
 
@@ -486,28 +501,28 @@
 	<!------------ Footer ------------>
 
 	<footer class="footer-block">
-		<div class="clearfix fixed-container">
+		<div class="container footer-block-part">
 
 
 			<!------------ Footer Menu ------------>
 
-			<ul class="footer-menu float-left">
-				<li><a href="#" class="footer-link">Главная</a></li>
-				<li><a href="#" class="footer-link">Политика</a></li>
-				<li><a href="#" class="footer-link">Общество</a></li>
-				<li><a href="#" class="footer-link">Экономика</a></li>
-				<li><a href="#" class="footer-link">В мире</a></li>
-				<li><a href="#" class="footer-link">Происшествия</a></li>
-				<li><a href="#" class="footer-link">Спорт</a></li>
-				<li><a href="#" class="footer-link">Наука</a></li>
-				<li><a href="#" class="footer-link">Туризм</a></li>
+			<ul class="footer-menu">
+				<li class="footer-menu__item"><a href="#" class="footer-link">Главная</a></li>
+				<li class="footer-menu__item"><a href="#" class="footer-link">Политика</a></li>
+				<li class="footer-menu__item"><a href="#" class="footer-link">Общество</a></li>
+				<li class="footer-menu__item"><a href="#" class="footer-link">Экономика</a></li>
+				<li class="footer-menu__item"><a href="#" class="footer-link">В мире</a></li>
+				<li class="footer-menu__item"><a href="#" class="footer-link">Происшествия</a></li>
+				<li class="footer-menu__item"><a href="#" class="footer-link">Спорт</a></li>
+				<li class="footer-menu__item"><a href="#" class="footer-link">Наука</a></li>
+				<li class="footer-menu__item"><a href="#" class="footer-link">Туризм</a></li>
 			</ul>
 
 
 			<!------------ Company Info ------------>
 
-			<ul class="footer-info float-left">
-				<li><a href="#">
+			<ul class="footer-info">
+				<li class="footer-info__logo"><a href="#">
 						<img src="img/logo-2.png" alt="На главную страницу">
 				</a></li>
 
@@ -519,7 +534,7 @@
 
 			<!------------ Contacts ------------>
 
-			<div class="footer-contacts float-right">
+			<div class="footer-contacts">
 				<ul class="social-net">
 					<li class="social-net__block"><a href="#" class="social-net__link vk" aria-label="Наш ВКонтакте"></a></li>
 					<li class="social-net__block"><a href="#" class="social-net__link facebook" aria-label="Наш Фэйсбук"></a></li>
@@ -542,7 +557,12 @@
 			© Новостное агентство, 2017-2018 все права защищены
 		</div>
 
-	</footer>		
+	</footer>	
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="scripts/main.js"></script>	
 
 </body>
 

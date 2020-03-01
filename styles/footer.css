@@ -3,11 +3,20 @@
 .footer-block {
 	background-color: #00122f;
 
-	padding-top: 50px;
+	padding-top: 40px;
 
 	font-size: 16px;
 	color: white;
 }
+
+
+
+.footer-block-part {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
 
 
 .footer-link {
@@ -15,17 +24,25 @@
 }
 
 
-.footer-menu, .footer-info, .footer-contacts {
-	display: inline-block;
-}
-
 
 
 /*----- Footer Menu -----*/
 
 .footer-menu {
-	column-count: 2;
-	column-gap: 32px;
+	display: flex;
+	flex-wrap: wrap;
+
+	width: 100%;
+	
+	padding-bottom: 25px;
+	margin: 0 25px;
+
+	border-bottom: 1px solid #666;
+}
+
+
+.footer-menu__item {
+	width: 50%;
 
 	line-height: 32px;
 }
@@ -35,23 +52,41 @@
 /*----- Footer Company Info -----*/
 
 .footer-info {
-	margin-left: 192px;
-	padding-top: 12px;
+	display: flex;
+	flex-wrap: wrap;
+
+	width: 100%;
+	
+	padding-bottom: 25px;
+	padding-top: 30px;
+	margin: 0 25px;
 }
 
 
 .footer-info__block {
-	width: 170px;
+	width: 50%;
 
-	display: block;
+	line-height: 32px;
+}
 
-	margin: 12px 0px;
-	padding-left: 4px;
+
+.footer-info__logo {
+	width: 100%;
+	margin-bottom: 14px;
 }
 
 
 
 /*----- Footer Contacts -----*/
+
+.footer-contacts {
+	width: 100%;
+	
+	padding-bottom: 25px;
+	padding-top: 10px;
+	margin: 0 25px;
+}
+
 
 .social-net {
 	margin: 8px 0 42px;
@@ -61,6 +96,13 @@
 .social-net__block {
 	display: inline-block;
 	vertical-align: middle;
+
+	margin-left: 16px;
+}
+
+
+.social-net__block:first-child {
+	margin-left: 0;
 }
 
 
@@ -69,8 +111,6 @@
 
 	width: 40px;
 	height: 40px;
-
-	margin-left: 16px;
 
 	border: 1px solid white;
 	border-radius: 100%;
@@ -100,7 +140,7 @@
 .contacts-info-block {
 	display: block;
 
-	margin: 24px 0px 0px 16px;
+	margin-top: 24px;
 	padding-left: 33px;
 
 	color: inherit;
@@ -127,14 +167,148 @@
 /*----- Copyrights -----*/
 .copyrights {
 	margin-top: 46px;
-	padding: 16px 0;
+	padding: 16px 25px;
 
 	border-top: 1px solid #666;
 
-	text-align: center;
+	text-align: left;
 	font-size: 14px;
 	color: #666;
 
 	background-color: #00122f;
 }
 
+
+@media screen and (min-width: 425px) {
+
+
+	.footer-info, .footer-contacts {
+		width: calc(50% - 35px);
+	}
+	
+
+	.footer-info {
+		margin: 0 10px 0 25px; 
+	}
+
+
+	.footer-info__block {
+		width: 100%;
+	}
+
+
+	.footer-contacts{
+		padding-top: 30px;
+		margin: 0 25px 0 10px; 
+	}
+
+
+	.social-net {
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+	.social-net__block {
+		margin-left: 0;
+	}
+
+
+	.contacts-info-block {
+		padding-left: 30px;
+	}
+
+
+
+	.copyrights {
+		text-align: center;
+	}
+
+
+
+
+
+}
+
+
+
+
+
+/* Малые девайсы («ландшафтные телефоны», >= 576px) */
+@media screen and (min-width: 576px) { 
+
+
+
+}
+
+/* Средние девайсы («таблетки», >= 768px) */
+@media screen and (min-width: 768px) { 
+
+		.footer-block {
+		padding-top: 50px;
+	}
+
+
+	.footer-menu, .footer-info, .footer-contacts {
+		width: unset;
+		
+		padding-bottom: 0;
+		margin: 0;
+
+		border-bottom: none;
+	}
+
+
+	.footer-menu {
+		width: 240px;
+	}
+
+
+	.footer-info {
+		padding-top: 12px;
+	}
+
+
+	.footer-contacts {
+		padding-top: 0;
+	}
+
+
+	.footer-info {
+		width: 180px;
+	}
+
+
+	.footer-info__block {
+		width: 100%;
+	}
+
+
+	.social-net__block:first-child {
+		margin-left: 16px;
+	}
+
+
+	.contacts-info-block {
+		margin-left: 16px;
+	}
+
+	.copyrights {
+		text-align: center;
+	}
+
+}
+
+/* Большие девайсы (десктопы, >= 992px) */
+@media screen and (min-width: 992px) { 
+
+
+
+}
+
+/* Экстрабольшие девайсы (большие десктопы, >= 1200px) */
+@media screen and (min-width: 1200px) { 
+
+
+
+}
